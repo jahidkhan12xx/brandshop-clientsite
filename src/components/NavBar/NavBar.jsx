@@ -92,7 +92,7 @@ const NavBar = () => {
 
     <div>
     <button onClick={handleOut}
-  className="btn rounded-none bg-transparent hover:bg-red-800 text-[#F39F5A] hover:text-white border-none"
+  className="btn rounded-none  bg-[#F39F5A]  hover:bg-red-800 text-[white] hover:text-white border-none"
   
 >
   LogOut

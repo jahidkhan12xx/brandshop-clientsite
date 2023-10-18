@@ -55,7 +55,7 @@ const BrandDetails = () => {
                 {
                 fData.map((prod,idx) => <BrandDetailsFull key={idx} prod={prod} id={id}></BrandDetailsFull>)
             }
-                </div></div>  : <div><h2 className=" text-7xl font-extrabold text-center h-[53.7vh] flex justify-center items-center">No Product Available</h2></div>
+                </div></div>  : <div><h2 className=" text-7xl font-extrabold text-center h-[53.7vh] flex justify-center items-center text-white">No Product Available</h2></div>
             }
         </div>
         
