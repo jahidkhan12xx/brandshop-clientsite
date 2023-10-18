@@ -45,8 +45,8 @@ const MyCartCard = ({prod,newData,setNewData}) => {
     return (
         <div>
            
-           <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
-  <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-96 rounded-xl bg-clip-border">
+           <div className="relative flex flex-col text-white bg-hero-pattern  shadow-md rounded-xl bg-clip-border">
+  <div className="relative mx-4 mt-4 overflow-hidden text-white bg-hero-pattern  h-96 rounded-xl bg-clip-border">
     <img
       src={product_img}
       className="object-cover w-full h-full"
@@ -61,7 +61,7 @@ const MyCartCard = ({prod,newData,setNewData}) => {
         {product_price}
       </p>
     </div>
-    <p className="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75">
+    <p className="block font-sans text-sm antialiased font-normal leading-normal text-white opacity-75">
       {product_des}
     </p>
   </div>

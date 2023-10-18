@@ -79,7 +79,7 @@ const NavBar = () => {
     // if user logged in
     <div className=" flex gap-2 justify-center text-white">
 
-      <h2 className=" font-bold text-red-900">{
+      <h2 className=" hidden md:block font-bold text-red-900">{
       user?.displayName? user.displayName : user.email
     }</h2>
     <div>{
