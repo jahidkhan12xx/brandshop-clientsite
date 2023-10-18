@@ -19,37 +19,35 @@ const NavBar = () => {
         <NavLink
   to="/"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold border-b-2 " : "btn rounded-none bg-transparent hover:bg-red-800 hover:text-white"
+    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold border-none  rounded-b-lg " : "btn rounded-none bg-transparent text-[#F39F5A] hover:bg-red-800 hover:text-white border-none"
   }
 >
   Home
 </NavLink>
-<NavLink
-  to="/addCart"
+ {
+  user && <NavLink
+  to="/addProduct"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold border-b-2" : "btn rounded-none bg-transparent hover:bg-red-800 text-black hover:text-white"
+    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold rounded-b-lg " : "btn rounded-none bg-transparent hover:bg-red-800 text-[#F39F5A] hover:text-white border-none"
   }
 >
-  Add Cart
+  Add Products
 </NavLink>
-<NavLink
+ }
+{
+  user && <NavLink
   to="/myCart"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold border-b-2" : "btn rounded-none bg-transparent hover:bg-red-800 text-black hover:text-white"
+    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold rounded-b-lg " : "btn rounded-none bg-transparent hover:bg-red-800 text-[#F39F5A] hover:text-white border-none"
   }
 >
-  MyCart
+  My Cart 
 </NavLink>
+}
 
 
-<NavLink
-  to="/login"
-  className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold border-b-2" : "btn rounded-none bg-transparent hover:bg-red-800 text-black hover:text-white"
-  }
->
-  Login
-</NavLink>
+
+
 
 
     </>
@@ -58,7 +56,7 @@ const NavBar = () => {
     return (
         <div className=" container mx-auto">
             
-            <div className="navbar bg-base-100 w-full h-20">
+            <div className="navbar  w-full h-20">
             
   <div className="navbar-start">
     <div className="dropdown">
@@ -77,24 +75,43 @@ const NavBar = () => {
     </ul>
   </div>
   {
-    user && <div className=" ml-[10%] flex justify-center items-center gap-6">
-    <div>
-        <h2>{
-            user?.displayName? user.displayName : user.email
-            }</h2>
-    </div>
-    <div className="  dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          {user.photoURL ? <img src={user.photoURL} alt="" /> : <FaUser className=" text-4xl font-bold"></FaUser>}
-        </div>
-      </label>
-      <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        
-        <li onClick={handleOut}><a>Logout</a></li>
-      </ul>
-    </div>
+    user ? 
+    // if user logged in
+    <div className=" flex gap-2 justify-center text-white">
+
+      <h2 className=" font-bold text-red-900">{
+      user?.displayName? user.displayName : user.email
+    }</h2>
+    <div>{
+      user?.photoURL ? <div className="avatar">
+  <div className="w-14 rounded-full">
+    <img className="" src={user.photoURL} />
   </div>
+</div> : <div><FaUser></FaUser></div>}
+    </div>
+
+    <div>
+    <button onClick={handleOut}
+  className="btn rounded-none bg-transparent hover:bg-red-800 text-[#F39F5A] hover:text-white border-none"
+  
+>
+  LogOut
+</button>
+    </div>
+    </div>
+    :
+    // if user not logged in
+    <div>
+      <NavLink
+  to="/login"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "btn rounded-none bg-red-800 hover:bg-red-800 text-white font-semibold rounded-b-lg " : "btn rounded-none bg-transparent hover:bg-red-800 text-[#F39F5A] hover:text-white border-none"
+  }
+>
+  Login 
+</NavLink>
+
+    </div>
     
   }
   </div>

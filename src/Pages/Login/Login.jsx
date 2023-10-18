@@ -35,6 +35,7 @@ const Login = () => {
         const form  = e.target;
         const email = form.email.value;
         const password = form.password.value;
+        
         console.log(email,password);
 
         setError("");
@@ -60,16 +61,22 @@ const Login = () => {
     return (
         <div className=" min-h-full w-full">
             <div className=" flex justify-center items-center h-[80vh] ">
-            <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
+            <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-[#F39F5A] shadow-none">
   <h4 className="block font-sans text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
     Login
   </h4>
-  <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+  <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-[#F39F5A] antialiased">
     Enter your email & password...
   </p>
   
   <form onSubmit={handleSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
     <div className="mb-4 flex flex-col gap-6">
+
+        {/* <select name="dropdown" id="dropdown">
+        <option value="intel">Intel</option>
+    <option value="amd">AMD</option>
+    <option value="apple">Apple</option>
+        </select> */}
       
       <div className="relative h-11 w-full min-w-[200px]">
         <input
@@ -124,10 +131,10 @@ const Login = () => {
         </span>
       </label>
       <label
-        className="mt-px cursor-pointer select-none font-light text-gray-700"
+        className="mt-px cursor-pointer select-none font-light text-[#F39F5A]"
         htmlFor="checkbox"
       >
-        <p className="flex items-center font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
+        <p className="flex items-center font-sans text-sm font-normal leading-normal text-[#F39F5A] antialiased">
           I agree the
           <a
             className="font-medium transition-colors hover:text-pink-500"
@@ -151,7 +158,7 @@ const Login = () => {
   </p>
     
     <div className="flex flex-col w-full ">
-  <div className="grid h-20 card rounded-box place-items-center"><p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+  <div className="grid h-20 card rounded-box place-items-center"><p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-[#F39F5A] antialiased">
       Don&#39;t have an account?
       <Link
       to="/register"
@@ -163,7 +170,7 @@ const Login = () => {
     </p></div>
   <div className="divider">OR</div>
   <div className="grid h-20 card rounded-box place-items-center">
-    <button onClick={handleGoogle} className=" btn btn-primary text-blue-800 bg-white hover:text-white hover:bg-blue-800"><FaGoogle></FaGoogle>  Login with Google</button>
+    <button onClick={handleGoogle} className=" btn btn-primary text-[#F39F5A] bg-white hover:text-white hover:bg-[#F39F5A]"><FaGoogle></FaGoogle>  Login with Google</button>
   </div>
 </div>
   </form>

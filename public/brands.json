@@ -1,0 +1,26 @@
+[
+    { "id":"intel", 
+      "brand_name": "Intel",
+      "brand_image": "https://i.ibb.co/mTzjwx8/wallpaperflare-com-wallpaper.jpg"
+    },
+    { "id":"amd",
+      "brand_name": "AMD",
+      "brand_image": "https://i.ibb.co/BjRNt58/wallpaperflare-com-wallpaper-1.jpg"
+    },
+    { "id":"asus",
+      "brand_name": "ASUS",
+      "brand_image": "https://i.ibb.co/NNT9X3T/wallpaperflare-com-wallpaper-3.jpg"
+    },
+    { "id":"nvidia",
+      "brand_name": "NVIDIA",
+      "brand_image": "https://i.ibb.co/NnsSvWf/1296508.jpg"
+    },
+    { "id":"microsoft",
+      "brand_name": "Microsoft",
+      "brand_image": "https://i.ibb.co/h84pFPN/1042296.jpg"
+    },
+    { "id":"apple",
+      "brand_name": "Apple",
+      "brand_image": "https://i.ibb.co/x6FZPf5/wallpaperflare-com-wallpaper-2.jpg"
+    }
+  ]

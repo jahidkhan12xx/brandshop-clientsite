@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 
 const Layout = () => {
     return (
-        <div>
+        <div className=" bg-hero-pattern">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>
