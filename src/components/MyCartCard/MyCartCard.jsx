@@ -16,7 +16,7 @@ const MyCartCard = ({prod,newData,setNewData}) => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:3000/cart/${id}`, {
+            fetch(`https://server-gnlpgh0dw-jahidkhan12xx.vercel.app/cart/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -58,7 +58,7 @@ const MyCartCard = ({prod,newData,setNewData}) => {
         {product_name}
       </p>
       <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
-        {product_price}
+        Price : {product_price} $
       </p>
     </div>
     <p className="block font-sans text-sm antialiased font-normal leading-normal text-white opacity-75">
@@ -71,7 +71,7 @@ const MyCartCard = ({prod,newData,setNewData}) => {
       className="block mt-3  text-white bg-red-900 w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
     >
-      X
+      Delete
     </button>
   </div>
 </div>

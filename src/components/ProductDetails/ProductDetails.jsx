@@ -12,7 +12,7 @@ const ProductDetails = () => {
     
     const handleAdd = (id) =>{
         console.log(id);
-        fetch("http://localhost:3000/cart",{
+        fetch("https://server-gnlpgh0dw-jahidkhan12xx.vercel.app/cart",{
             method:"POST",
             headers: {
                 "Content-Type": "application/json",
