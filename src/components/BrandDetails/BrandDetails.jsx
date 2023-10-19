@@ -50,7 +50,7 @@ const BrandDetails = () => {
       ...
     </Swiper>
                 </div>
-                <h2 className=" text-5xl font-black  my-20 text-center underline text-[#F39F5A]"> <p className=" uppercase">{id} Products</p>  </h2>
+                <h2 className=" md:text-5xl text-2xl font-black  my-20 text-center underline text-[#F39F5A]"> <p className=" uppercase">{id} Products</p>  </h2>
                 <div className=" grid grid-cols-1 md:grid-cols-2 p-2 container mx-auto gap-7">
                 {
                 fData.map((prod,idx) => <BrandDetailsFull key={idx} prod={prod} id={id}></BrandDetailsFull>)
