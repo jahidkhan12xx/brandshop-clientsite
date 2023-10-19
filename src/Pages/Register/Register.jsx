@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
-    const [error,setError] = useState(null);
+    const [error,setError] = useState(null); 
     const navigate = useNavigate();
 
     const handleSubmit = (e) =>{
