@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { AuthContext } from "../../Context/AuthProvider";
 
 
 const ProductDetails = () => {
     
     const data = useLoaderData();
+    const {user} =useContext(AuthContext);
+    console.log(user.email);
+    const email = user.email;
    const {product_name,brand_name,product_price,product_des,product_type,product_img,product_rating} = data;
 
-   const product = {product_name,brand_name,product_price,product_des,product_type,product_img,product_rating};
+   const product = {email,product_name,brand_name,product_price,product_des,product_type,product_img,product_rating};
    console.log(product);
     
     const handleAdd = (id) =>{

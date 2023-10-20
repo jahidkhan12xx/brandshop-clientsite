@@ -1,14 +1,27 @@
 import { useLoaderData } from "react-router-dom";
 import MyCartCard from "../../components/MyCartCard/MyCartCard";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
 
 
 
 const MyCart = () => {
+  const {user} = useContext(AuthContext)
+
+  // const [fUser,setFUser] = useState([]);
 
   const data = useLoaderData();
-  const [newData,setNewData] = useState(data);
+  const [newData,setNewData] = useState([]);
   console.log(data);
+
+  useEffect(()=>{
+    const singleUser = data.filter(sUser=> sUser.email == user.email);
+    setNewData(singleUser);
+  },[data,user.email])
+
+  console.log();
 
   
     return (

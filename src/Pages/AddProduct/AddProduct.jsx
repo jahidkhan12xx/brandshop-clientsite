@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../../Context/AuthProvider';
 
 
 
 const AddProduct = () => {
+
+    
 
     const handleSubmit = e =>{
         e.preventDefault();
