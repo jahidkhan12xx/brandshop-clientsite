@@ -9,7 +9,7 @@ const ContactUs = () => {
             <section className=" my-36">
   <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div className="mx-auto max-w-screen-md sm:text-center">
-          <h2 className="mb-4 tracking-tight text-6xl text-[#F39F5A] text-center font-black sm:text-4xl ">Sign up for our newsletter</h2>
+          <h2 className="mb-4 tracking-tight md:text-6xl text-[#F39F5A] text-center font-black underline text-4xl ">Our newsletter</h2>
           <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
           <form action="#">
               <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
